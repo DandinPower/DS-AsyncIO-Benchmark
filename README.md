@@ -2,13 +2,13 @@
 
 This project benchmarks the latency of asynchronous I/O operations (using DeepSpeed's AsyncIOBuilder) for read and write tasks on an NVMe storage device. It measures performance across varying tensor sizes, providing detailed statistics including mean, median, standard deviation, 95% confidence intervals, and percentiles (50th, 90th, 99th). The goal is to evaluate NVMe throughput under controlled conditions, helping identify bottlenecks in high-performance computing workflows like those in machine learning.
 
-**Note:** This benchmark assumes a Linux environment with NVMe access.
+**Note:** This benchmark assumes a Linux environment.
 
 ## Prerequisites
 
 - Ubuntu/Debian-based system (or compatible Linux distro).
 - Root/sudo access for package installation.
-- NVMe device mounted (e.g., at `/mnt/nvme`—configurable via script arguments).
+- Disk device mounted (e.g., at `/mnt/nvme`—configurable via script arguments).
 - Python 3.10+.
 
 ## Installation
@@ -47,7 +47,7 @@ python benchmark.py --nvme-path /mnt/my-nvme --sizes 2M 8M 32M 256M --iterations
 ```
 
 ### Key Arguments
-- `--nvme-path` (default: `/mnt/nvme`): Path to the NVMe mount point. Ensure it's empty or backed up—the script will clean it.
+- `--nvme-path` (default: `/mnt/nvme`): Path to the NVMe mount point (it can also be other type of disk). Ensure it's empty or backed up—the script will clean it.
 - `--sizes` (default: `2M 8M 32M`): Tensor sizes to test (supports K/M/G suffixes, e.g., `4K 1M`).
 - `--iterations` (default: `200`): Number of iterations per size for statistical reliability.
 - `--threads` (default: `16`): Number of I/O threads.
