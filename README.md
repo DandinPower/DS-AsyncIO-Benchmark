@@ -58,28 +58,30 @@ python benchmark.py --nvme-path /mnt/my-nvme --sizes 2M 8M 32M 256M --iterations
 The script prints results to stdout, like:
 
 ```
-Writes: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:01<00:00, 116.80it/s]
+Benchmarking size: 8388608 bytes
+Writes: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:00<00:00, 412.36it/s]
 Write Statistics:
-  Latency Mean: 0.008422327s
-  Latency Median: 0.009718733s
-  Latency Std Dev: 0.002184281s
-  Latency 95% CI: (0.008117754, 0.008726900)
-  Latency Percentiles: {'50th': np.float64(0.00971873349044472), '90th': np.float64(0.00992813630728051), '99th': np.float64(0.012846746661234643)}
-  Bandwidth Mean: 1083.946 MB/s
-  Bandwidth Median: 863.138 MB/s
-  Bandwidth Std Dev: 341.978 MB/s
-  Bandwidth 95% CI: (1036.261, 1131.630)
-  Bandwidth Percentiles: {'50th': np.float64(863.1380261316615), '90th': np.float64(1591.8030968247208), '99th': np.float64(1613.1072831188094)}
-Reads: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:01<00:00, 129.08it/s]
+  Latency Mean: 0.002318887s
+  Latency Median: 0.002228687s
+  Latency Std Dev: 0.000534179s
+  Latency 95% CI: (0.002244401, 0.002393372)
+  Latency Percentiles: {'50th': np.float64(0.0022286869352683425), '90th': np.float64(0.0023388271103613077), '99th': np.float64(0.006486591713037342)}
+  Bandwidth Mean: 3692.992 MB/s
+  Bandwidth Median: 3763.924 MB/s
+  Bandwidth Std Dev: 340.833 MB/s
+  Bandwidth 95% CI: (3645.467, 3740.517)
+  Bandwidth Percentiles: {'50th': np.float64(3763.9241826468337), '90th': np.float64(3868.211800553445), '99th': np.float64(3907.243455674987)}
+Reads: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 200/200 [00:00<00:00, 1454.76it/s]
 Read Statistics:
-  Latency Mean: 0.006736185s
-  Latency Median: 0.007893178s
-  Latency Std Dev: 0.002424730s
-  Latency 95% CI: (0.006398085, 0.007074286)
-  Latency Percentiles: {'50th': np.float64(0.007893177564255893), '90th': np.float64(0.009326752624474466), '99th': np.float64(0.009442441564751788)}
-  Bandwidth Mean: 1496.787 MB/s
-  Bandwidth Median: 1062.767 MB/s
-  Bandwidth Std Dev: 703.571 MB/s
-  Bandwidth 95% CI: (1398.682, 1594.891)
-  Bandwidth Percentiles: {'50th': np.float64(1062.766920840555), '90th': np.float64(2540.1458479962716), '99th': np.float64(2570.0019490567906)}
+  Latency Mean: 0.000677568s
+  Latency Median: 0.000676752s
+  Latency Std Dev: 0.000004102s
+  Latency 95% CI: (0.000676996, 0.000678140)
+  Latency Percentiles: {'50th': np.float64(0.0006767519516870379), '90th': np.float64(0.0006814692867919802), '99th': np.float64(0.0006894060247577727)}
+  Bandwidth Mean: 12380.909 MB/s
+  Bandwidth Median: 12395.395 MB/s
+  Bandwidth Std Dev: 73.861 MB/s
+  Bandwidth 95% CI: (12370.610, 12391.208)
+  Bandwidth Percentiles: {'50th': np.float64(12395.39536003464), '90th': np.float64(12444.124615030207), '99th': np.float64(12500.948521844197)}
+Cleaned up files for size 8388608
 ```
